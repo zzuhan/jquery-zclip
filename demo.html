@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试zclip</title>
+    <style>
+    .absBox {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+    }
+    #copy-btn {
+        /*cursor: pointer;*/
+    }
+    #copy-btn2 {
+        margin-left: 10px;
+        padding-left: 5px;
+    }
+
+    /* 这个是zeroclipboard产生的介质 */
+    #global-zeroclipboard-html-bridge {
+        background: rgba(0,0,0,.5);
+    }
+
+   /* .test-absolute-cursor {
+        width: 30px;
+        height: 30px;
+        background: red;
+        cursor: pointer;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }*/
+    </style>
+</head>
+<body>
+    <button href="javascript:;" id="copy-btn">复制我</button>
+    <div class="absBox">
+        <a href="javascript:;" id="copy-btn2">test</a>
+    </div>
+
+    <div class="test-absolute-cursor"></div>
+
+    <script src="http://localhost:8080/cdn/jquery.js"></script>
+    <script src="zeroclipboard.js"></script>
+    <script src="jquery.zclip1x.js"></script>
+  <!--   // <script src="http://s1.qhimg.com/!e116f766/jquery-zclip/zeroclipboard,jquery.zclip1x.js"></script> -->
+    <script>
+    $copy = $('#copy-btn').zclip({
+        beforeCopy: function () {
+            // 如何实现beforeCopy呢？
+            console.log('before copy');  
+        },
+        copy: function () {
+            console.log("按钮的内容是" + $(this).text());
+            console.log('copy');
+            return '我就是复制你了';
+        },
+        // copy: '我就是复制你了',
+        afterCopy: function () {
+            console.log('after Copy');
+        },
+
+        clickAfter: true
+    });
+
+    $copy.on('click', function  () {
+        console.log('been clicked');
+    })
+
+    // $copy.zclip('remove');
+    $copy.zclip('show');
+    // $copy.zclip('hide');
+
+
+
+    </script>
+</body>
+</html>
