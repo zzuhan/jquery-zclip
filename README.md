@@ -1,10 +1,16 @@
-jquery.zclip1x.js 基于 zeroclipboard v1.x 支持到IE6和其他浏览器
-jquery.zclip2x.js 基于 zeroclipboard v2.x 支持IE9+和其他浏览器
+jquery.zclip1x.js 基于 zeroclipboard v1.x 支持到IE6和其他浏览器  
+jquery.zclip2x.js 基于 zeroclipboard v2.x 支持IE9+和其他浏览器  
 
 鉴于国内的浏览器环境，还是推荐选择 jquery.zclip1x.js.
 
 # 安装
 
+依赖于zeroclipboard 1.3.5版本(最稳定，无bug)
+
+```
+<script src="zeroclipboard.135.js"></script>
+<script src="jquery.zclip1x.js"></script>
+```
 
 # 使用
 
@@ -32,8 +38,8 @@ $copy = $('#copy-btn').zclip({
 
 # 参考
 
-[zeroclipboard1.x的文档](https://github.com/zeroclipboard/zeroclipboard/blob/1.x-master/docs/instructions.md)
-[jquery.zclip.js 原作](https://github.com/patricklodder/jquery-zclip/blob/master/jquery.zclip.js)
+- [zeroclipboard1.x的文档](https://github.com/zeroclipboard/zeroclipboard/blob/1.x-master/docs/instructions.md)
+- [jquery.zclip.js 原作](https://github.com/patricklodder/jquery-zclip/blob/master/jquery.zclip.js)
 
 
 
